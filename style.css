@@ -1,0 +1,4 @@
+body{
+  background: rgb(255,255,255);
+  background: linear-gradient(172deg, rgba(255,255,255,1) 7%, rgba(0,149,255,0.577468487394958) 26%, rgba(0,0,0,1) 100%, rgba(0,136,144,1) 100%);
+}
