@@ -1,11 +1,9 @@
 //arreglo Inicial
-var arreglo = {b:1, a:2, c:3, e:4};
+var arreglo = {b:'Apple', c:'Microsoft', a:'Google'};
 //Mostramos el arreglo
 console.log('keys y values: ')
-console.log(JSON.stringify(arreglo));
-//llamamos a la funcion
-keysValues(arreglo);
-//
+console.log(arreglo);
+//funcion 
 function keysValues (array){
   //Ordenamos el objeto por keys
   var arreglOrdenado =Object.keys(array).sort().reduce(
@@ -13,13 +11,13 @@ function keysValues (array){
       obj[key] = array[key]; 
         return obj;}, 
     {});
-  //Mostramos arreglo ordenado
-  console.log('keys y values Ordenados: ')
-  console.log(JSON.stringify(arreglOrdenado));
-  //Mostramos Solo las Keys
-  console.log('Arreglo de Keys: ')
-  console.log(Object.keys(arreglOrdenado));
-  //Mostramos Solo los valores
-  console.log('Arreglo de Values: ')
-  console.log(Object.entries(array))
+  //retornamos keys y values
+  return {
+      keys : Object.keys(arreglOrdenado),
+      values : Object.values(arreglOrdenado),
+  };  
 }
+//llamamos a la funcion
+  var objetos = keysValues(arreglo);
+  console.log(objetos.keys)
+  console.log(objetos.values)
